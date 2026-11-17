@@ -1,0 +1,12 @@
+{
+  "appId": "com.calm.psychology",
+  "appName": "Calm",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false
+  }
+}

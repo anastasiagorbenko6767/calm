@@ -1,0 +1,18 @@
+node_modules
+dist
+server/data.db*
+.env
+.env.production
+
+# Capacitor
+android/app/build
+android/build
+android/.gradle
+android/local.properties
+android/.idea
+android/app/release
+*.apk
+*.aab
+
+# ngrok
+scripts/ngrok.log

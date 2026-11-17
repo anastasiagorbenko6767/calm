@@ -1,0 +1,14 @@
+/* Страница «актуальность». Опирается на theme.css и tests.css. */
+
+.text h2 {
+  color: var(--text-on-dark);
+  font-size: 22px;
+  font-weight: 800;
+  margin: 26px 0 12px;
+}
+
+.text p {
+  color: var(--text-on-dark);
+  line-height: 1.7;
+  font-size: 16px;
+}

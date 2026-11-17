@@ -1,0 +1,113 @@
+/* Общий лист для внутренних страниц: tests, features, history, relevance, profile, формы.
+   Опирается на theme.css. */
+
+main.main > .contaniner {
+  /* уже стилизовано темой; добавим мягкую границу сверху для разделения */
+  position: relative;
+}
+
+main.main > .contaniner::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  top: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
+  opacity: 0.8;
+}
+
+.text_t {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.text_t h4 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  margin: 0 0 24px;
+  background: linear-gradient(90deg, #f4fbf7, #8eeab7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text {
+  color: var(--text-on-dark);
+  animation: fadeInUp var(--t-slow) var(--ease) both;
+}
+
+.text p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.7;
+  text-indent: 0;
+  text-align: left;
+  margin: 0 0 14px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+}
+
+.text h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 32px 0 14px;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* маленькая карточка теста на /tests */
+.test {
+  background: var(--panel);
+  color: var(--text);
+  padding: 22px 24px 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  margin: 18px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: translateY(0);
+  transition: transform var(--t-med) var(--ease),
+              box-shadow var(--t-med) var(--ease);
+  animation: fadeInUp var(--t-slow) var(--ease) both;
+}
+
+.test:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.test p {
+  color: var(--text);
+  text-align: left;
+  text-indent: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.test .test_web {
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+/* ссылки внутри .text */
+.text a {
+  color: var(--accent-soft);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 1px dashed rgba(47, 179, 126, 0.6);
+  padding: 2px 4px;
+  transition: color var(--t-fast) var(--ease),
+              background var(--t-fast) var(--ease);
+}
+
+.text a:hover {
+  color: #fff;
+  background: rgba(47, 179, 126, 0.2);
+  border-radius: 6px;
+}

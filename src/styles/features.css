@@ -1,0 +1,56 @@
+/* Страница «особенности». Опирается на theme.css и tests.css. */
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-on-dark);
+}
+
+.title h2 {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #f4fbf7, #8eeab7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.citata {
+  background: var(--panel);
+  color: var(--text-strong);
+  width: 100%;
+  max-width: 820px;
+  padding: 24px 28px;
+  margin: 28px auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--accent);
+  animation: fadeInUp var(--t-slow) var(--ease) both;
+  position: relative;
+  overflow: hidden;
+}
+
+.citata::before {
+  content: "\201C";
+  position: absolute;
+  top: -30px;
+  left: 14px;
+  font-family: Georgia, serif;
+  font-size: 150px;
+  color: var(--accent-soft);
+  opacity: 0.25;
+  line-height: 1;
+}
+
+.citata_taxt {
+  position: relative;
+  font-size: clamp(16px, 2vw, 20px);
+  font-style: italic;
+  color: var(--text-strong);
+  text-align: left;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.text h2 { color: var(--text-on-dark); }
